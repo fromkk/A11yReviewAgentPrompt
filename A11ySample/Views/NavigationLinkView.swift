@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct NavigatgationLinkView<Label: View>: View {
+struct NavigationLinkView<Label: View>: View {
   let label: Label
 
   var body: some View {
@@ -14,5 +14,5 @@ struct NavigatgationLinkView<Label: View>: View {
 }
 
 #Preview {
-  NavigatgationLinkView(label: Text("Navigation Link"))
+  NavigationLinkView(label: Text("Navigation Link"))
 }

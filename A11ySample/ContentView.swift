@@ -35,7 +35,7 @@ struct ContentView: View {
     NavigationStack {
       List(selection: $selectedMenu) {
         ForEach(Menu.allCases, id: \.self) {
-          NavigatgationLinkView(label: Text($0.name))
+          NavigationLinkView(label: Text($0.name))
         }
       }
       .navigationDestination(item: $selectedMenu, destination: { menu in

@@ -8,6 +8,7 @@ struct TooMuchExplain: View {
           // TODO: something
         } label: {
           HStack {
+            // NG: VoiceOver reads "Photo, Pick a photo" - redundant information
             Image(systemName: "photo")
               .accessibilityLabel("Photo")
             Text("Pick a photo")
@@ -20,6 +21,7 @@ struct TooMuchExplain: View {
           // TODO: something
         } label: {
           HStack {
+            // OK: Hide decorative icon, only the text will be announced
             Image(systemName: "photo")
               .accessibilityHidden(true)
             Text("Pick a photo")
