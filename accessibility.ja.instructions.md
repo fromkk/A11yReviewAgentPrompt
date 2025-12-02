@@ -73,6 +73,27 @@ struct HStackButtonSample: View {
 }
 ```
 
+画像や動画だけを表示する場合には必ず気を付けてください。例えば以下の様な例です。
+
+```swift
+struct OnlyImageView: View {
+    var body: some View {
+        Image(.banner)
+    }
+}
+```
+
+これでは画像が何を表現しているのか分からないので、以下の様にラベルを追加します。
+
+```swift
+struct OnlyImageView: View {
+    var body: some View {
+        Image(.banner)
+            .accessibilityLabel("New product image")
+    }
+}
+```
+
 ### 状態
 
 ボタン内に `isSelected` の様な状態を表すプロパティがある場合には、状態を付与することが望ましいです。
