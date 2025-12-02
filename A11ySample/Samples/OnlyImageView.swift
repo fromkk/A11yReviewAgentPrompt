@@ -15,7 +15,7 @@ struct OnlyImageView: View {
           .resizable()
           .aspectRatio(contentMode: .fit)
           .frame(maxWidth: .infinity, maxHeight: .infinity)
-          .accessibilityLabel("LUMINA EYES NEW PRODUCT LAUNCH")
+          .accessibilityLabel("Lumina Eyes New Product Launch")
       }
     }
     .navigationTitle("Only Image")
