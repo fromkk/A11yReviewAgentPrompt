@@ -13,7 +13,7 @@ enum Menu: Int, Hashable, Identifiable, CaseIterable {
     case .noAccessibilityLabel:
       return "No Accessibility Label"
     case .tooMuchExplain:
-      return "Too Much Explain"
+      return "Too Much Explanation"
     }
   }
 

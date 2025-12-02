@@ -29,7 +29,7 @@ struct TooMuchExplain: View {
         }
       }
     }
-    .navigationTitle("Too much explain")
+    .navigationTitle("Too Much Explanation")
   }
 }
 
