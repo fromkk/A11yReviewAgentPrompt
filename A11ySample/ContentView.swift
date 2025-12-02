@@ -2,6 +2,7 @@ import SwiftUI
 
 enum Menu: Int, Hashable, Identifiable, CaseIterable {
   case noAccessibilityLabel
+  case tooMuchExplain
 
   var id: Int {
     rawValue
@@ -11,6 +12,8 @@ enum Menu: Int, Hashable, Identifiable, CaseIterable {
     switch self {
     case .noAccessibilityLabel:
       return "No Accessibility Label"
+    case .tooMuchExplain:
+      return "Too Much Explanation"
     }
   }
 
@@ -19,6 +22,8 @@ enum Menu: Int, Hashable, Identifiable, CaseIterable {
     switch self {
     case .noAccessibilityLabel:
       NoAccessibilityLabel()
+    case .tooMuchExplain:
+      TooMuchExplain()
     }
   }
 }
@@ -30,7 +35,7 @@ struct ContentView: View {
     NavigationStack {
       List(selection: $selectedMenu) {
         ForEach(Menu.allCases, id: \.self) {
-          NavigatgationLinkView(label: Text($0.name))
+          NavigationLinkView(label: Text($0.name))
         }
       }
       .navigationDestination(item: $selectedMenu, destination: { menu in
