@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct TooMuchExplain: View {
+struct TooMuchExplanation: View {
   var body: some View {
     TabView {
       Tab("NG", systemImage: "nosign") {
@@ -34,5 +34,5 @@ struct TooMuchExplain: View {
 }
 
 #Preview {
-  TooMuchExplain()
+  TooMuchExplanation()
 }

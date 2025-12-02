@@ -8,6 +8,7 @@ struct NavigationLinkView<Label: View>: View {
       label
         .frame(maxWidth: .infinity, alignment: .leading)
       Image(systemName: "chevron.forward")
+        .accessibilityHidden(true)
     }
     .padding(8)
   }

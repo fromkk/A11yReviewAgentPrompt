@@ -1,33 +1,5 @@
 import SwiftUI
 
-enum Menu: Int, Hashable, Identifiable, CaseIterable {
-  case noAccessibilityLabel
-  case tooMuchExplain
-
-  var id: Int {
-    rawValue
-  }
-
-  var name: String {
-    switch self {
-    case .noAccessibilityLabel:
-      return "No Accessibility Label"
-    case .tooMuchExplain:
-      return "Too Much Explanation"
-    }
-  }
-
-  @ViewBuilder
-  var view: some View {
-    switch self {
-    case .noAccessibilityLabel:
-      NoAccessibilityLabel()
-    case .tooMuchExplain:
-      TooMuchExplain()
-    }
-  }
-}
-
 struct ContentView: View {
   @State var selectedMenu: Menu?
 

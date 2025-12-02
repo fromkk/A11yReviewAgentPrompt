@@ -73,7 +73,28 @@ struct HStackButtonSample: View {
 }
 ```
 
-### State
+Be careful when displaying only images or videos. Here's an example:
+
+```swift
+struct OnlyImageView: View {
+    var body: some View {
+        Image(.banner)
+    }
+}
+```
+
+This doesn't make it clear what the image represents, so add a label as follows:
+
+```swift
+struct OnlyImageView: View {
+    var body: some View {
+        Image(.banner)
+            .accessibilityLabel("New product image")
+    }
+}
+```
+
+### Trait
 
 When a button contains a property that represents state, such as `isSelected`, it's preferable to add state information.
 
@@ -139,7 +160,7 @@ struct SectionHeaderSample: View {
 }
 ```
 
-In such cases, you need to add state (trait) as follows. Adding the `.isHeader` trait helps VoiceOver users understand the structure:
+In such cases, you need to add trait as follows. Adding the `.isHeader` trait helps VoiceOver users understand the structure:
 
 ```swift
 struct SectionHeaderSample: View {
