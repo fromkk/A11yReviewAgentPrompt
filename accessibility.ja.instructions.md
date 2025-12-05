@@ -207,59 +207,6 @@ struct OnTapGestureViewSample: View {
 }
 ```
 
-
-### 値とヒント
-
-動的な値を持つ要素には、`.accessibilityValue`を使用して現在の値を説明してください。
-
-```swift
-struct SliderSample: View {
-    @State var value: Double = 0.5
-
-    var body: some View {
-        Slider(value: $value, in: 0...1)
-    }
-}
-```
-
-上記のコードには値の説明が不足しています。以下のように改善してください。
-
-```swift
-struct SliderSample: View {
-    @State var value: Double = 0.5
-
-    var body: some View {
-        Slider(value: $value, in: 0...1)
-            .accessibilityValue("\(Int(value * 100))パーセント")
-    }
-}
-```
-
-操作の意図が明確でない場合は、`.accessibilityHint`を使用して操作のヒントを提供してください。
-
-```swift
-struct SwipeActionSample: View {
-    var body: some View {
-        Button("削除") {
-            // delete action
-        }
-    }
-}
-```
-
-上記のコードには操作のヒントが不足している場合があります。以下のように改善してください。
-
-```swift
-struct SwipeActionSample: View {
-    var body: some View {
-        Button("削除") {
-            // delete action
-        }
-        .accessibilityHint("スワイプして削除します")
-    }
-}
-```
-
 ### カスタムアクション
 
 複雑な操作には、`.accessibilityAction`を使用してカスタムアクションを定義できます。
